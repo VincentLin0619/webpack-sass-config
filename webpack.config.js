@@ -5,7 +5,7 @@ const webpack = require('webpack')
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, 'app', 'index'),
+  entry: path.resolve(__dirname, 'src', 'index'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
@@ -79,7 +79,7 @@ module.exports = {
     new webpack.ProvidePlugin({ process: 'process/browser' }),
     // 用於生成html文件。其中template選項指定輸入的html文件路徑，filename選項指定打包完成後的html文件名稱，minify選項則指定對生成的html進行壓縮的配置選項。
     new HtmlWebpackPlugin({
-      template: './app/index.html', //輸入html
+      template: './src/index.html', //輸入html
       filename: 'index.html', //打包完的名稱
       title: 'Development',
       minify: {
