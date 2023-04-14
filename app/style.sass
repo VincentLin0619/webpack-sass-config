@@ -1,2 +1,58 @@
+@import './style/TodoHeader/todoHeader'
+@import './style/TodoBody/todoBody'
+@import './style/TodoFooter/todoFooter'
+@import './style/popup'
+
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700|Noto+Sans+TC:wght@100')
+
+$roboto-font: 'Roboto Slab', serif
+$open-sans: 'Open Sans', sans-serif
+$noto-sans: 'Noto Sans TC', sans-serif
+
 body
+  background-color: #000000
   background-image: url('./assets/1.jpg')
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
+  display: flex
+  align-items: center
+  vertical-align: middle
+  position: relative
+  height: 100vh
+  margin: 0px
+*
+  color: aliceblue
+
+h1
+  font-size: 2rem
+  font-family: $roboto-font
+
+input, span, textarea
+  font-family: $noto-sans
+
+button
+  background-color: #5348ef
+  border: none
+  font-family: $open-sans
+
+/* ======================================================= */
+.container
+  // background-color: #393939
+  box-shadow: 1px 2px 6px #000000
+  backdrop-filter: blur(20px)
+  border-radius: 15px
+  height: auto
+  margin: auto
+  width: 80%
+  padding: 15px
+  display: flex
+  flex-direction: column
+  gap: 15px
+  .todo-header,
+  .todo-body,
+  .todo-footer
+    width: 100%
+    display: flex
+    margin: 0

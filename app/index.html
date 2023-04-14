@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="/public/css/index.css" type="text/css" /> -->
   </head>
   <body>
-    <h1>testTitle</h1>
-    <!-- <script src="./index.js"></script> -->
+    <div class="container">
+      <div class="todo-header">
+        <h1 class="title">TodoList</h1>
+      </div>
+      <div class="todo-body" tabindex="0">
+        <button id="todo-btn" tabindex="-1">addTask</button>
+      </div>
+      <div class="todo-footer">
+        <ul class="todo-list"></ul>
+        <!-- todoLists -->
+      </div>
+    </div>
+    <!-- popup擬態框開始 -->
+    <section class="module hidden">
+      <div class="content-form">
+        <button class="close-form-btn">
+          <span class="show">X</span>
+          <span class="hover-show">Close</span>
+        </button>
+        <div class="form-title">
+          <input class="todo-title" type="text" placeholder="代辦事項" />
+        </div>
+        <div class="form-body">
+          <textarea
+            placeholder="代辦內容..."
+            name="form-content"
+            class="form-content"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <div class="form-footer">
+          <button class="form-btn">送出</button>
+        </div>
+      </div>
+    </section>
+    <!-- popup擬態框結束 -->
+    <!-- <script
+      type="text/javascript"
+      src="/src/bundle.js"
+      charset="utf-8"
+    ></script> -->
   </body>
 </html>
