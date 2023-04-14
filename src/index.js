@@ -1,4 +1,4 @@
-import './style.sass'
+import './index.sass'
 // import { getLocalData, bindDeleteBtn } from "./helper/helper";
 // import deleteHandler from "./todo_delete";
 import { togglePopForm } from './javascript/togglePop';
