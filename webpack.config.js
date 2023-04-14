@@ -80,7 +80,7 @@ module.exports = {
     // 用於生成html文件。其中template選項指定輸入的html文件路徑，filename選項指定打包完成後的html文件名稱，minify選項則指定對生成的html進行壓縮的配置選項。
     new HtmlWebpackPlugin({
       template: './src/index.html', //輸入html
-      filename: './index.html', //打包完的名稱
+      filename: './public/index.html', //打包完的名稱
       title: 'Development',
       minify: {
         collapseBooleanAttributes: true,
@@ -106,7 +106,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    static: path.join(__dirname, '/dist/'),
+    static: path.join(__dirname, '/dist/public'),
     hot: true,
     host: 'localhost',
     port: 8080,
