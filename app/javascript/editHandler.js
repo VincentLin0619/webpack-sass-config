@@ -30,7 +30,6 @@ export function showEditForm(e) {
         localStorage.setItem('listItems', JSON.stringify(localData));
         editForm.classList.add('hidden');
         renderTodoList();
-        bindBtnHandler();
     })
 
     // 找到對應的 listItem

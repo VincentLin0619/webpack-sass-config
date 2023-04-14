@@ -20,8 +20,6 @@ function addHandler(e) {
     localStorage.setItem('listItems', JSON.stringify([...localData, dataObj]));
 
     createListItem(dataObj);
-    bindBtnHandler();
-
     todoTitle.value = '';
     todoContent.value = '';
 

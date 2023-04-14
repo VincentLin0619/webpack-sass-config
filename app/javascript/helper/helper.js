@@ -26,13 +26,17 @@ function createListItem(props) {
         </div>
         <div class="item-right">
             <span>${props.date}</span>
-            <button id="edit-btn" data-edit="${props.id}">編輯</button>
-            <button id="delete-btn" data-delete="${props.id}">刪除</button>
+            <button class="edit-btn" data-edit="${props.id}">編輯</button>
+            <button class="delete-btn" data-delete="${props.id}">刪除</button>
         </div>
         </div>
         `;
     listItems.innerHTML += str;
-    todoList.insertBefore(listItems, todoList.children[0]);
+    todoList.insertBefore(listItems, todoList.children[0],);
+
+    if (todoList.childElementCount != -1) {
+        bindBtnHandler(listItems);
+    }
 }
 
 function renderTodoList() {
@@ -43,13 +47,15 @@ function renderTodoList() {
     const localData = getLocalData();
     // 建立新的 todo 列表
     localData.forEach((item) => {
-        createListItem(item)
+        createListItem(item);
+
     });
 }
 
-function bindBtnHandler() {
-    const deleteBtn = document.getElementById('delete-btn');
-    const editBtn = document.getElementById('edit-btn');
+function bindBtnHandler(props) {
+    // const nodeList = props;
+    const deleteBtn = props.querySelector('.delete-btn');
+    const editBtn = props.querySelector('.edit-btn');
     deleteBtn.addEventListener('click', (e) => deleteHandler(e));
     editBtn.addEventListener('click', (e) => showEditForm(e));
 }

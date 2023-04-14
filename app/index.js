@@ -3,11 +3,12 @@ import './style.sass'
 // import deleteHandler from "./todo_delete";
 import { togglePopForm } from './javascript/togglePop';
 import { addHandler } from './javascript/addHandler';
-import { updateList } from './javascript/updateList';
+import { renderTodoList } from './javascript/helper/helper';
 
 
 
-window.onload = updateList;
+
+window.onload = renderTodoList;
 
 const toggleBtn = document.querySelector('.close-form-btn').addEventListener('click', e => togglePopForm(e));
 
