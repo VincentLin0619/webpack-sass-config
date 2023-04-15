@@ -1,4 +1,5 @@
-import { getLocalData, bindBtnHandler, createListItem } from "./helper/helper";
+import { getLocalData, createListItem } from "./helper/helper";
+import { togglePopForm } from "./togglePop";
 
 
 const todoTitle = document.querySelector('.todo-title');
@@ -22,7 +23,7 @@ function addHandler(e) {
     createListItem(dataObj);
     todoTitle.value = '';
     todoContent.value = '';
-
+    togglePopForm();
 }
 
 export { addHandler }
